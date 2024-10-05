@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "927889519621",
+    "project_id": "chem-push",
+    "storage_bucket": "chem-push.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927889519621:android:43a0d1d5a79f0de6ccd86c",
+        "android_client_info": {
+          "package_name": "com.example.chem_push"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0rMyVEzpanU5UINGHasv-EuFLQmL9CNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
