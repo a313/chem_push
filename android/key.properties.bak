@@ -1,0 +1,5 @@
+storePassword=chempush
+keyPassword=chempush
+keyAlias=chempush
+storeFile=../chempush.jks
+# SHA256:81:48:B9:B2:B8:88:F8:37:E6:31:D4:F6:E3:70:73:BB:AD:7F:5B:58:D9:0D:A7:2F:3A:49:51:B0:1B:A4:15:D1
