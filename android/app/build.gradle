@@ -54,11 +54,16 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
 
-        // manifestPlaceholders = +[
-        //         JPUSH_PKGNAME : applicationId,
-        //         JPUSH_APPKEY : "eb67142502ec9f5556875b9a", //JPush 上注册的包名对应的 Appkey.
-        //         JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
-        // ]
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'mips', 'mips64', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "eb67142502ec9f5556875b9a", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
     }
 
     signingConfigs {
@@ -75,7 +80,7 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
-    
+
     buildTypes {
         release {            
             signingConfig signingConfigs.debug
