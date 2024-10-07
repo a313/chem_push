@@ -3,6 +3,7 @@ plugins {
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
     id "com.google.gms.google-services"
+    id "com.huawei.agconnect"
 }
 
 def localProperties = new Properties()
@@ -60,7 +61,7 @@ android {
 
         manifestPlaceholders = [
                 JPUSH_PKGNAME : applicationId,
-                JPUSH_APPKEY : "eb67142502ec9f5556875b9a", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_APPKEY : "af332ece8f8431e38f073dd2", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
         ]
 
@@ -93,6 +94,13 @@ flutter {
 }
 
 dependencies {
-    implementation "com.google.firebase:firebase-messaging:22.0.0"
+        //厂商版本和 JPush SDK 版本保持一致
+    implementation 'cn.jiguang.sdk.plugin:fcm:5.5.0'    
+    implementation 'com.google.firebase:firebase-messaging:23.0.5'
+    // implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
+    implementation 'com.huawei.hms:push:6.12.0.300'
+    implementation 'cn.jiguang.sdk.plugin:huawei:5.5.0'
+
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
